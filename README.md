@@ -22,3 +22,5 @@ Depois de baixado, execute
 Em seguida, rode o setup com
 
     sudo ./setup.sh
+    
+Inspirado no repositório "ew-ubuntu-setup" do Erick Wendel ([link do repositório](https://github.com/ErickWendel/ew-ubuntu-setup)) :)
