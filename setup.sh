@@ -27,7 +27,7 @@ echo 'luanpanno@gmail.com adicionado como user.email no git'
 git config --global user.email "luanpanno@gmail.com"
 
 echo '-------------------------------------------------'
-echo 'instalando npm'
+echo 'instalando node.js'
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
