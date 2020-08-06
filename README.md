@@ -11,7 +11,11 @@
 8. Insomnia
 
 ## Como executar
-No terminal, vá até a pasta em que o setup.sh foi baixado e execute
+Abra o terminal e baixe o setup.sh na pasta desejada executando a seguinte linha
+
+    wget https://github.com/luanpanno/linux-setup/blob/master/setup.sh
+
+Depois de baixado, execute
 
     chmod +x setup.sh
 
