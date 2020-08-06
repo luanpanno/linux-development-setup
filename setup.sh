@@ -24,7 +24,7 @@ git config --global user.name "luanpanno"
 
 echo '-------------------------------------------------'
 echo 'luanpanno@gmail.com adicionado como user.email no git'
-git config --global user.name "luanpanno@gmail.com"
+git config --global user.email "luanpanno@gmail.com"
 
 echo '-------------------------------------------------'
 echo 'instalando npm'
