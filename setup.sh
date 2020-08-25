@@ -19,12 +19,12 @@ echo 'instalando git'
 sudo apt-get install git -y
 
 echo '-------------------------------------------------'
-echo 'luanpanno adicionado como user.name no git'
-git config --global user.name "luanpanno"
+git config --global user.name "Luan Panno"
+echo 'Luan Panno adicionado como user.name no git'
 
 echo '-------------------------------------------------'
-echo 'luanpanno@gmail.com adicionado como user.email no git'
 git config --global user.email "luanpanno@gmail.com"
+echo 'luanpanno@gmail.com adicionado como user.email no git'
 
 echo '-------------------------------------------------'
 echo 'instalando node.js'
