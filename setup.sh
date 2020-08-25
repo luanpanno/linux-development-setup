@@ -47,6 +47,7 @@ code --install-extension PKief.material-icon-theme
 code --install-extension ritwickdey.liveserver
 code --install-extension EQuimper.react-native-react-redux
 code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension esbenp.prettier-vscode
 
 echo '-------------------------------------------------'
 echo 'instalando spotify' 
@@ -55,6 +56,12 @@ sudo snap install spotify
 echo '-------------------------------------------------'
 echo 'instalando insomnia'
 sudo snap install insomnia
+
+echo '-------------------------------------------------'
+echo 'instalando zsh'
+sudo apt-get install zsh -y
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+chsh -s /bin/zsh
 
 echo '-------------------------------------------------'
 echo ' '
