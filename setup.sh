@@ -48,6 +48,7 @@ code --install-extension ritwickdey.liveserver
 code --install-extension EQuimper.react-native-react-redux
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension esbenp.prettier-vscode
+code --install-extension ms-azuretools.vscode-docker
 
 echo '-------------------------------------------------'
 echo 'instalando spotify' 
@@ -58,12 +59,32 @@ echo 'instalando insomnia'
 sudo snap install insomnia
 
 echo '-------------------------------------------------'
+echo 'instalando openvpn'
+sudo apt-get install openvpn -y
+
+echo '-------------------------------------------------'
+echo 'instalando docker' 
+sudo apt-get remove docker docker-engine docker.io
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+docker --version
+
+sudo chmod 777 /var/run/docker.sock
+docker run hello-world
+
+echo '-------------------------------------------------'
+echo 'instalando docker-compose' 
+sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+
+
+echo '-------------------------------------------------'
 echo 'instalando zsh'
 sudo apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 chsh -s /bin/zsh
 
 echo '-------------------------------------------------'
-echo ' '
-echo 'Setup finalizado! :)'
-echo ' '
+echo '\n Setup finalizado! :) \n'
