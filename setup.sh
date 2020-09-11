@@ -48,6 +48,11 @@ code --install-extension ritwickdey.liveserver
 code --install-extension EQuimper.react-native-react-redux
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension esbenp.prettier-vscode
+code --install-extension editorconfig.editorconfig
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension jpoissonnier.vscode-styled-components
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --install-extension naumovs.color-highlight
 code --install-extension ms-azuretools.vscode-docker
 
 echo '-------------------------------------------------'
@@ -59,8 +64,26 @@ echo 'instalando insomnia'
 sudo snap install insomnia
 
 echo '-------------------------------------------------'
+echo 'instalando flameshot'
+sudo apt-get install flameshot
+
+echo '-------------------------------------------------'
+echo 'instalando peek'
+sudo apt-get install peek
+
+echo '-------------------------------------------------'
 echo 'instalando openvpn'
 sudo apt-get install openvpn -y
+
+echo '-------------------------------------------------'
+echo 'instalando create-react-app'
+sudo npm i -g create-react-app
+
+echo '-------------------------------------------------'
+echo 'instalando yarn'
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
 
 echo '-------------------------------------------------'
 echo 'instalando docker' 
