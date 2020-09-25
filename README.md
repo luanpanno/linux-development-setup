@@ -11,11 +11,11 @@
 8. Insomnia
 
 ## Como executar
-Abra o terminal e baixe o setup.sh na pasta desejada executando a seguinte linha
+Abra o terminal e baixe o arquivo compactado na pasta desejada executando a seguinte linha
 
-    wget https://github.com/luanpanno/linux-setup/blob/master/setup.sh
+    wget https://github.com/luanpanno/linux-setup/archive/master.zip -O linux-setup.zip
 
-Depois de baixado, execute
+Depois de baixado, extraia, vá para a pasta extraída no terminal e digite
 
     chmod +x setup.sh
 
@@ -23,4 +23,6 @@ Em seguida, rode o setup com
 
     ./setup.sh
     
+Também vai acompanhado meus arquivos de settings e keybinds do VSCode!
+
 Inspirado no repositório "ew-ubuntu-setup" do Erick Wendel ([link do repositório](https://github.com/ErickWendel/ew-ubuntu-setup)) :)
