@@ -27,7 +27,7 @@ git config --global user.email "luanpanno@gmail.com"
 echo 'luanpanno@gmail.com adicionado como user.email no git'
 
 echo '-------------------------------------------------'
-echo 'instalando node.js'
+echo 'instalando Node.js'
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install nodejs -y
 
@@ -42,18 +42,19 @@ sudo apt-get install code -y # or code-insiders
 
 echo '-------------------------------------------------'
 echo 'instalando extensões no VSCode'
-code --install-extension azemoh.one-monokai
-code --install-extension PKief.material-icon-theme
-code --install-extension ritwickdey.liveserver
-code --install-extension EQuimper.react-native-react-redux
-code --install-extension shd101wyy.markdown-preview-enhanced
-code --install-extension esbenp.prettier-vscode
-code --install-extension editorconfig.editorconfig
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension jpoissonnier.vscode-styled-components
-code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code --install-extension naumovs.color-highlight
 code --install-extension ms-azuretools.vscode-docker
+code --install-extension editorconfig.editorconfig
+code --install-extension dbaeumer.vscode-eslint
+code --install-extension eamodio.gitlens
+code --install-extension shd101wyy.markdown-preview-enhanced
+code --install-extension PKief.material-icon-theme
+code --install-extension azemoh.one-monokai
+code --install-extension esbenp.prettier-vscode
+code --install-extension EQuimper.react-native-react-redux
+code --install-extension ms-vscode-remote.remote-containers
+code --install-extension ms-vscode.vscode-typescript-tslint-plugin
+code --install-extension jpoissonnier.vscode-styled-components
 
 echo '-------------------------------------------------'
 echo 'instalando spotify' 
@@ -70,14 +71,6 @@ sudo apt-get install flameshot
 echo '-------------------------------------------------'
 echo 'instalando peek'
 sudo apt-get install peek
-
-echo '-------------------------------------------------'
-echo 'instalando openvpn'
-sudo apt-get install openvpn -y
-
-echo '-------------------------------------------------'
-echo 'instalando create-react-app'
-sudo npm i -g create-react-app
 
 echo '-------------------------------------------------'
 echo 'instalando yarn'
