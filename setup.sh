@@ -58,11 +58,11 @@ code --install-extension jpoissonnier.vscode-styled-components
 
 echo '-------------------------------------------------'
 echo 'instalando flameshot'
-sudo apt-get install flameshot
+sudo apt-get install flameshot -y
 
 echo '-------------------------------------------------'
 echo 'instalando peek'
-sudo apt-get install peek
+sudo apt-get install peek -y
 
 echo '-------------------------------------------------'
 echo 'instalando yarn'
