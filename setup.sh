@@ -60,7 +60,17 @@ echo '-------------------------------------------------'
 echo 'instalando spotify'
 curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+sudo apt-get update && sudo apt-get install spotify-client -y
+
+echo '-------------------------------------------------'
+echo 'instalando insomnia'
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+    | sudo apt-key add -
+
+sudo apt-get update && sudo apt-get install insomnia -y
 
 echo '-------------------------------------------------'
 echo 'instalando flameshot'
