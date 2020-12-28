@@ -57,14 +57,6 @@ code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code --install-extension jpoissonnier.vscode-styled-components
 
 echo '-------------------------------------------------'
-echo 'instalando spotify' 
-sudo snap install spotify
-
-echo '-------------------------------------------------'
-echo 'instalando insomnia'
-sudo snap install insomnia
-
-echo '-------------------------------------------------'
 echo 'instalando flameshot'
 sudo apt-get install flameshot
 
