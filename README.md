@@ -47,7 +47,7 @@ Inspired by Erick Wendel's [ew-ubuntu-setup repository](https://github.com/Erick
 
 Open the terminal, go to the directory you want to download the setup, and then run this line
 
-    wget https://github.com/luanpanno/linux-setup/archive/master.zip -O linux-setup.zip
+    wget https://github.com/luanpanno/linux-development-setup/archive/master.zip -O linux-development-setup.zip
 
 It will come zipped, so you must unzip the file, then go to its directory and run
 
