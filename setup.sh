@@ -16,7 +16,7 @@ sudo apt-get install curl -y
 
 echo '-------------------------------------------------'
 echo 'installing git' 
-sudo apt-get install git-all -y
+sudo apt-get install git -y
 
 echo '-------------------------------------------------'
 echo "What name do you want to use in GIT user.name?"
