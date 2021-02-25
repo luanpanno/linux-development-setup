@@ -23,7 +23,6 @@ echo "What name do you want to use in GIT user.name?"
 echo "For example, mine will be \"Luan Panno\""
 read git_config_user_name
 git config --global user.name "$git_config_user_name"
-clear 
 
 echo '-------------------------------------------------'
 echo "What email do you want to use in GIT user.email?"
@@ -117,6 +116,27 @@ sudo curl -L "https://github.com/docker/compose/releases/download/1.24.0/docker-
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
 
+echo '-------------------------------------------------'
+echo 'add user to docker group' 
+sudo usermod -aG docker $USER
+newgrp docker
+
+echo '-------------------------------------------------'
+echo 'installing filezilla' 
+sudo apt-get install filezilla -y
+
+echo '-------------------------------------------------'
+echo 'installing dbeaver'
+wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
+sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
+sudo apt-get install -f
+
+echo '-------------------------------------------------'
+echo 'installing microsoft teams'
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
+sudo apt update
+sudo apt install teams -y
 
 echo '-------------------------------------------------'
 echo 'installing zsh'
