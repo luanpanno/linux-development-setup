@@ -1,0 +1,59 @@
+{
+  "React Component": {
+    "prefix": "rc",
+    "body": [
+      "export const ${TM_DIRECTORY/^.+\\/(.*)$/$1/} = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "}"
+    ]
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "export const ${TM_DIRECTORY/^.+\\/(.*)$/$1/}: React.FC = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "}"
+    ]
+  },
+  "React Functional Component With Props": {
+    "prefix": "rfcp",
+    "body": [
+      "interface Props {}",
+      "",
+      "export const ${TM_DIRECTORY/^.+\\/(.*)$/$1/}: React.FC<Props> = () => {",
+      "  return (",
+      "    $0",
+      "  );",
+      "}"
+    ]
+  },
+  "React Context": {
+    "prefix": "rctx",
+    "body": [
+      "import { createContext } from 'react';",
+      "",
+      "interface Context {",
+      " $2: $3;",
+      "}",
+      "",
+      "const $1Context = createContext<Context>({} as Context);",
+      "",
+      "export const $1Provider: React.FC = ({ children }) => {",
+      " $0",
+      " return (",
+      " <$1Context.Provider value={{} as Context}>",
+      " {children}",
+      " </$1Context.Provider>",
+      " );",
+      "};"
+    ]
+  },
+  "Import Container from Styles": {
+    "prefix": "icfs",
+    "body": ["import { Container } from './styles';"]
+  }
+}
