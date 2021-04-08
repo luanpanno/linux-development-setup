@@ -51,16 +51,17 @@ code --install-extension naumovs.color-highlight
 code --install-extension ms-azuretools.vscode-docker
 code --install-extension editorconfig.editorconfig
 code --install-extension dbaeumer.vscode-eslint
+code --install-extension mhutchie.git-graph
 code --install-extension eamodio.gitlens
 code --install-extension andys8.jest-snippets
+code --install-extension ritwickdey.liveserver
+code --install-extension ms-vsliveshare.vsliveshare
 code --install-extension shd101wyy.markdown-preview-enhanced
 code --install-extension PKief.material-icon-theme
 code --install-extension azemoh.one-monokai
 code --install-extension esbenp.prettier-vscode
-code --install-extension EQuimper.react-native-react-redux
 code --install-extension natqe.reload
 code --install-extension ms-vscode-remote.remote-containers
-code --install-extension ms-vscode.vscode-typescript-tslint-plugin
 code --install-extension jpoissonnier.vscode-styled-components
 
 echo '-------------------------------------------------'
