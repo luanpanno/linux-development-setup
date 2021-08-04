@@ -127,10 +127,15 @@ echo 'installing filezilla'
 sudo apt-get install filezilla -y
 
 echo '-------------------------------------------------'
-echo 'installing dbeaver'
-wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
-sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
-sudo apt-get install -f
+echo 'installing beekeeper studio'
+wget --quiet -O - https://deb.beekeeperstudio.io/beekeeper.key | sudo apt-key add -
+echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
+sudo apt update
+sudo apt install beekeeper-studio -y
+
+echo '-------------------------------------------------'
+echo 'installing terminator'
+sudo apt-get install terminator
 
 echo '-------------------------------------------------'
 echo 'installing microsoft teams'
@@ -146,4 +151,4 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 chsh -s /bin/zsh
 
 echo '-------------------------------------------------'
-echo '\n Setup done! :) \n'
+echo '\n Done! :) \n'

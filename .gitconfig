@@ -11,3 +11,10 @@
 	l = !git log --pretty=format:'%C(blue)%h%C(red)%d %C(white)%s - %C(cyan)%cn, %C(green)%cr'
 	amend = !git add --all && git commit --amend --no-edit
 	count = !git shortlog -s --grep
+	t = !sh -c 'git tag -a $1 -m $1' -
+	bn = !git checkout -b
+	bd = !git branch --delete
+	br = !git branch -M
+	setpush = !git push --set-upstream
+[pull]
+	rebase = true

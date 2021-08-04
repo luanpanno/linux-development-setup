@@ -14,11 +14,21 @@
   "typescript.preferences.quoteStyle": "single",
   "prettier.jsxSingleQuote": true,
   "prettier.singleQuote": true,
+  "eslint.run": "onSave",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
   "git.rebaseWhenSync": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "prettier.trailingComma": "all"
+  "prettier.trailingComma": "all",
+  "material-icon-theme.folders.color": "#7dd1ff",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontLigatures": true,
+  "createReactTSXComponent.useArrowFunctionComponent": true,
+  "createReactTSXComponent.useReactFC": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.fontSize": 15,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

@@ -23,7 +23,7 @@ Inspired by Erick Wendel's [ew-ubuntu-setup repository](https://github.com/Erick
 13. [Docker](https://docs.docker.com/engine/install/ubuntu/)
 14. [Docker Compose](https://docs.docker.com/compose/install/)
 15. [FileZilla](https://filezilla-project.org/)
-16. [DBeaver](https://dbeaver.io/)
+16. [Beekeeper Studio](https://docs.beekeeperstudio.io/)
 17. [Microsoft Teams](https://www.microsoft.com/pt-br/microsoft-teams/free)
 18. [ZSH](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH)
 19. [Oh my Zsh](https://ohmyz.sh/#install)

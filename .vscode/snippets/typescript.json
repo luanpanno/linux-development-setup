@@ -8,5 +8,47 @@
       "",
       "`;"
     ]
+  },
+  "Jest Describe With Test": {
+    "prefix": "desctj",
+    "body": [
+      "describe('$1', () => {",
+      "  test('Should $2', () => {",
+      "    $0",
+      "  });",
+      "});"
+    ]
+  },
+  "Jest Describe": {
+    "prefix": "descj",
+    "body": ["describe('$1', () => {", "  $0", "});"]
+  },
+  "Jest Test": {
+    "prefix": "testj",
+    "body": ["test('Should $1', () => {", "  $0", "});"]
+  },
+  "Jest Async Test": {
+    "prefix": "testaj",
+    "body": ["test('$1', async () => {", "  $0", "});"]
+  },
+  "Jest Before All": {
+    "prefix": "ballj",
+    "body": ["beforeAll(() => {", "  $0", "});"]
+  },
+  "Jest Before Each": {
+    "prefix": "beachj",
+    "body": ["beforeEach(() => {", "  $0", "});"]
+  },
+  "Jest After All": {
+    "prefix": "aallj",
+    "body": ["afterAll(() => {", "  $0", "});"]
+  },
+  "Jest After Each": {
+    "prefix": "aeachj",
+    "body": ["afterEach(() => {", "  $0", "});"]
+  },
+  "Console Log": {
+    "prefix": "log",
+    "body": ["console.log('$1', $1)"]
   }
 }
