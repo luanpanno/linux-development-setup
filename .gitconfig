@@ -13,7 +13,7 @@
 	count = !git shortlog -s --grep
 	t = !sh -c 'git tag -a $1 -m $1' -
 	bn = !git checkout -b
-	bd = !git branch --delete
+	bd = !git branch -D 
 	br = !git branch -M
 	setpush = !git push --set-upstream
 [pull]

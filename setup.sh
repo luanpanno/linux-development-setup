@@ -1,5 +1,5 @@
 echo '-------------------------------------------------'
-echo 'Linux Development Setup - Luan Panno'
+echo '       Linux Development Setup - Luan Panno      '
 echo '-------------------------------------------------'
 
 echo 'running update'
@@ -19,22 +19,23 @@ echo 'installing git'
 sudo apt-get install git -y
 
 echo '-------------------------------------------------'
-echo "What name do you want to use in GIT user.name?"
-echo "For example, mine will be \"Luan Panno\""
-read git_config_user_name
-git config --global user.name "$git_config_user_name"
+echo "Setting git user name"
+git config --global user.name "Luan Panno"
 
 echo '-------------------------------------------------'
-echo "What email do you want to use in GIT user.email?"
-echo "For example, mine will be \"luanpanno@gmail.com\""
-read git_config_user_email
-git config --global user.email $git_config_user_email
-clear
+echo "Setting git user email"
+git config --global user.email "luanpanno@gmail.com"
 
 echo '-------------------------------------------------'
 echo 'installing Node.js LTS'
 curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
 sudo apt-get install nodejs -y
+
+echo '-------------------------------------------------'
+echo 'installing yarn'
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
 
 echo '-------------------------------------------------'
 echo 'installing VSCode'
@@ -44,25 +45,6 @@ sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode s
 sudo apt-get install apt-transport-https -y
 sudo apt-get update
 sudo apt-get install code -y # or code-insiders
-
-echo '-------------------------------------------------'
-echo 'installing VSCode Extensions'
-code --install-extension naumovs.color-highlight
-code --install-extension ms-azuretools.vscode-docker
-code --install-extension editorconfig.editorconfig
-code --install-extension dbaeumer.vscode-eslint
-code --install-extension mhutchie.git-graph
-code --install-extension eamodio.gitlens
-code --install-extension andys8.jest-snippets
-code --install-extension ritwickdey.liveserver
-code --install-extension ms-vsliveshare.vsliveshare
-code --install-extension shd101wyy.markdown-preview-enhanced
-code --install-extension PKief.material-icon-theme
-code --install-extension azemoh.one-monokai
-code --install-extension esbenp.prettier-vscode
-code --install-extension natqe.reload
-code --install-extension ms-vscode-remote.remote-containers
-code --install-extension jpoissonnier.vscode-styled-components
 
 echo '-------------------------------------------------'
 echo 'installing spotify'
@@ -89,16 +71,19 @@ echo 'installing peek'
 sudo apt-get install peek -y
 
 echo '-------------------------------------------------'
-echo 'installing remmina'
-sudo apt-add-repository ppa:remmina-ppa-team/remmina-next
+echo 'installing beekeeper studio'
+wget --quiet -O - https://deb.beekeeperstudio.io/beekeeper.key | sudo apt-key add -
+echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
 sudo apt update
-sudo apt install remmina remmina-plugin-rdp remmina-plugin-secret -y
+sudo apt install beekeeper-studio -y
 
 echo '-------------------------------------------------'
-echo 'installing yarn'
-curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+echo 'installing terminator'
+sudo apt-get install terminator -y
+
+echo '-------------------------------------------------'
+echo 'installing vim'
+sudo apt-get install vim -y
 
 echo '-------------------------------------------------'
 echo 'installing docker' 
@@ -121,28 +106,6 @@ echo '-------------------------------------------------'
 echo 'add user to docker group' 
 sudo usermod -aG docker $USER
 newgrp docker
-
-echo '-------------------------------------------------'
-echo 'installing filezilla' 
-sudo apt-get install filezilla -y
-
-echo '-------------------------------------------------'
-echo 'installing beekeeper studio'
-wget --quiet -O - https://deb.beekeeperstudio.io/beekeeper.key | sudo apt-key add -
-echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
-sudo apt update
-sudo apt install beekeeper-studio -y
-
-echo '-------------------------------------------------'
-echo 'installing terminator'
-sudo apt-get install terminator
-
-echo '-------------------------------------------------'
-echo 'installing microsoft teams'
-curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
-sudo apt update
-sudo apt install teams -y
 
 echo '-------------------------------------------------'
 echo 'installing zsh'
