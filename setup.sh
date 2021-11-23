@@ -86,6 +86,10 @@ echo 'installing vim'
 sudo apt-get install vim -y
 
 echo '-------------------------------------------------'
+echo 'installing gnome-tweak-tool'
+sudo apt-get install gnome-tweak-tool -y
+
+echo '-------------------------------------------------'
 echo 'installing docker' 
 sudo apt-get remove docker docker-engine docker.io
 sudo apt install docker.io -y
