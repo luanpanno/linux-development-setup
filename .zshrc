@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/luanpanno/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,12 +70,10 @@ ZSH_THEME="spaceship"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-	git
-	zsh-autosuggestions
-)
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
+source ~/.nvm/nvm.sh
 
 # User configuration
 
@@ -102,19 +100,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias redis-server="~/redis-server.sh"
-alias npm-refresh="sudo rm -rf ./node_modules && rm -rf ./package-lock.json && npm i"
-alias full-update="sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get dist-upgrade -y"
-
-# Variables
-SPACESHIP_NODE_SHOW=false
-SPACESHIP_PACKAGE_SHOW=false
-SPACESHIP_DOCKER_SHOW=false
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-
+#
 # place this after nvm initialization!
 autoload -U add-zsh-hook
 load-nvmrc() {
@@ -136,3 +122,15 @@ load-nvmrc() {
 }
 add-zsh-hook chpwd load-nvmrc
 load-nvmrc
+
+SPACESHIP_NODE_SHOW=false
+SPACESHIP_PACKAGE_SHOW=false
+
+alias lovelystay="cd ~/dev/lovelystay/react"
+alias lovelystay1="cd ~/dev/lovelystay/dev1"
+alias lovelystay2="cd ~/dev/lovelystay/dev2"
+alias lovelystay3="cd ~/dev/lovelystay/dev3"
+alias lovelystay4="cd ~/dev/lovelystay/dev4"
+alias lovelystay5="cd ~/dev/lovelystay/dev5"
+
+export GPG_TTY=$(tty)
