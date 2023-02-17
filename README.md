@@ -33,15 +33,17 @@ Inspired by Erick Wendel's [ew-ubuntu-setup repository](https://github.com/Erick
 
 3.  Add permissions to allow the setup file to be executed
 
-        chmod +x setup.sh
+        chmod +x install.sh
 
-4.  Then, execute the setup by running the following line
+4.  Then, execute the `install.sh` by running the following line
 
-        ./setup.sh
+        ./install.sh
 
 This repository also contain some of my settings (like themes)!
 
 ## Additional commands
+
+The following commands are not installed with the main `install.sh` file, so you must install them separately.
 
 1.  To install docker and docker-compose:
 
