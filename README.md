@@ -1,4 +1,4 @@
-# Linux Development Setup by Luan Panno
+# Linux Development Setup
 
 Inspired by Erick Wendel's [ew-ubuntu-setup repository](https://github.com/ErickWendel/ew-ubuntu-setup) :)
 
@@ -23,24 +23,30 @@ Inspired by Erick Wendel's [ew-ubuntu-setup repository](https://github.com/Erick
 
 ## How to run the setup
 
-Open the terminal, go to the directory you want to download the setup, and then run this line
+1.  Open the terminal, go to the directory you want to download the setup, and then run the following line
 
-    wget https://github.com/luanpanno/linux-development-setup/archive/master.zip -O linux-development-setup.zip
+        wget https://github.com/luanpanno/linux-development-setup/archive/master.zip -O linux-development-setup.zip
 
-It will come zipped, so you must unzip the file, then go to its directory and run
+2.  Unzip the file by running following command
 
-    chmod +x setup.sh
+        unzip linux-development-setup.zip
 
-Then, execute the setup running the following line
+3.  Add permissions to allow the setup file to be executed
 
-    ./setup.sh
+        chmod +x setup.sh
 
-It also includes my settings and keyboard shortcuts from VSCode and my Git Config file!
+4.  Then, execute the setup by running the following line
 
-## Aditional commands
+        ./setup.sh
 
-1. To install docker and docker-compose:
-   `./install-docker.sh`
+This repository also contain some of my settings (like themes)!
 
-2. To install the same theme I use:
-   `./install-theme.sh`
+## Additional commands
+
+1.  To install docker and docker-compose:
+
+        chmod +x install-docker.sh && ./install-docker.sh
+
+2.  To install the same theme I use:
+
+        chmod +x install-themes.sh && ./install-themes.sh
