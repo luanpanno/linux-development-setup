@@ -11,4 +11,8 @@ echo '\n-------------------------------------------------'
 echo 'installing ohmyzsh theme'
 git clone https://github.com/spaceship-prompt/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt" --depth=1
 
+echo '\n-------------------------------------------------'
+echo 'installing firacode'
+sudo apt-get install fonts-firacode -y
+
 echo '\nDone'
