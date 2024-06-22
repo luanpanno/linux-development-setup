@@ -38,7 +38,7 @@ sudo apt-get install nodejs -y
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing nvm'
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -46,26 +46,27 @@ echo '\n-------------------------------------------------'
 echo '>>>>> installing yarn'
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt-get update && sudo apt-get install yarn
+sudo apt-get update && sudo apt-get install yarn -y
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing vscode'
 curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor >microsoft.gpg
 sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
 sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https -y
 sudo apt-get update
 sudo apt-get install code -y # or code-insiders
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing spotify'
-curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | sudo apt-key add -
+curl -sS https://download.spotify.com/debian/pubkey_6224F9941A8AA6D1.gpg | sudo gpg --dearmor --yes -o /etc/apt/trusted.gpg.d/spotify.gpg
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing insomnia'
-echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" | sudo tee /etc/apt/sources.list.d/insomnia.list
+curl -1sLf \
+  'https://packages.konghq.com/public/insomnia/setup.deb.sh' |
+  sudo -E distro=ubuntu codename=focal bash
 sudo apt update
 sudo apt install insomnia -y
 
@@ -79,10 +80,11 @@ sudo apt-get install peek -y
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing beekeeper studio'
-wget --quiet -O - https://deb.beekeeperstudio.io/beekeeper.key | sudo apt-key add -
-echo "deb https://deb.beekeeperstudio.io stable main" | sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list
-sudo apt update
-sudo apt install beekeeper-studio -y
+curl -fsSL https://deb.beekeeperstudio.io/beekeeper.key | sudo gpg --dearmor --output /usr/share/keyrings/beekeeper.gpg &&
+  sudo chmod go+r /usr/share/keyrings/beekeeper.gpg &&
+  echo "deb [signed-by=/usr/share/keyrings/beekeeper.gpg] https://deb.beekeeperstudio.io stable main" |
+  sudo tee /etc/apt/sources.list.d/beekeeper-studio-app.list >/dev/null
+sudo apt update && sudo apt install beekeeper-studio -y
 
 echo '\n-------------------------------------------------'
 echo '>>>>> installing terminator'
@@ -109,7 +111,7 @@ echo '\n-------------------------------------------------'
 echo '\n>>>>> Run the following command if you want to install docker:'
 echo './install-docker.sh'
 
-echo '\n>>>>> Run the following command if you want to install my themes:'
+echo '\n>>>>> Run the following command if you want to install themes:'
 echo './install-themes.sh'
 
 echo '\n>>>>> Setup done! :)'
